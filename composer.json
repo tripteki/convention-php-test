@@ -1,0 +1,55 @@
+{
+    "name": "tripteki/laravelphp-test",
+    "version": "1.0.0",
+    "description": "Trip Teknologi's Codebase Convention",
+
+    "readme": "README.md",
+    "license": "MIT",
+    "authors": [ { "name": "Trip Teknologi", "email": "tripteki.company@gmail.com" } ],
+    "homepage": "https://github.com/tripteki/convention-php-test",
+    "support": { "issues": "https://github.com/tripteki/convention-php-test/issues" },
+
+    "require": {
+
+        "php": "^8.0.2",
+        "ext-xdebug": "*",
+
+        "nunomaduro/collision": "^6.3.1",
+        "phpunit/phpunit": "^9.5.25",
+        "laravel/dusk": "^7.1.0",
+        "mockery/mockery": "^1.5.1",
+        "fakerphp/faker": "^1.20.0"
+    },
+
+    "require-dev": {},
+
+    "autoload": {
+
+        "files": [
+
+            "src/Helpers/TestPath.php"
+        ],
+
+        "psr-4": {
+
+            "Tripteki\\Test\\": "src/"
+        }
+    },
+
+    "autoload-dev": {},
+
+    "extra": {
+
+        "laravel": {
+
+            "dont-discover": [],
+
+            "providers": [
+
+                "Tripteki\\Test\\Providers\\TestServiceProvider"
+            ],
+
+            "aliases": []
+        }
+    }
+}
